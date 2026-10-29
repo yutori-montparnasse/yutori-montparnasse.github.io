@@ -163,7 +163,7 @@ section {
   font-size: 12px;
 }
 
-.feature h3 {
+.feature .project-title {
   font-size: clamp(23px, 3vw, 32px);
   line-height: 1.6;
   margin: 18px 0;
@@ -349,4 +349,217 @@ footer {
     display: none;
   }
 
+}
+
+/* トップのYouTubeボタン：文字とボタンを縦に並べます。 */
+.intro-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 12px 20px;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.button-light {
+  color: var(--pink);
+  background: var(--ink);
+}
+
+.button:hover,
+.button:focus-visible {
+  text-decoration: underline;
+}
+
+/* アーカイブからチャンネルへのリンク */
+.text-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+/* SNSカード：パソコンは3列、スマートフォンは1列に並べます。 */
+.links-note {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #686175;
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+/* 各カードの中は、説明・サービス名・アカウント名・リンクの順です。 */
+.social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 28px 24px 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffcf8;
+  text-decoration: none;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  border-color: var(--ink);
+  background: #f4e9eb;
+}
+
+.social-category {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: #686175;
+}
+
+.social-name {
+  margin-top: 16px;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.social-handle {
+  margin-top: 8px;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+/* 上の文章の長さが変わっても、カード下部の位置をそろえます。 */
+.social-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 30px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.social-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+/* メール：SNSの下に、独立した横長の連絡先エリアを置きます。 */
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 24px;
+  padding: 28px;
+  border-radius: 8px;
+  background: #ebe8ee;
+}
+
+.contact-description {
+  min-width: 0;
+}
+
+.contact .contact-label {
+  margin: 0 0 8px;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.contact h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.contact p {
+  margin: 6px 0 0;
+  font-size: 12px;
+}
+
+.email-link {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.email-caption {
+  font-size: 11px;
+  color: #686175;
+}
+
+.email-address {
+  font-size: 14px;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+/* 読み上げ用の補足：画面には表示しません。 */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* スマートフォン用：カードと連絡先を縦に並べます。 */
+@media (max-width: 760px) {
+  .social-links {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .social-link {
+    padding: 24px;
+  }
+
+  .social-name {
+    margin-top: 10px;
+  }
+
+  .social-action {
+    padding-top: 20px;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 24px;
+  }
+}
+
+@media (max-width: 650px) {
+  .intro-links {
+    margin-top: 24px;
+  }
 }
