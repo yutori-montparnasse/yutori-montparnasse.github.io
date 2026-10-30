@@ -572,3 +572,23 @@ footer {
   margin: 16px 0;
   border-radius: 4px;
 }
+
+/* きいちゃんの写真：顔と麺の器を残し、手前の食器を枠外にします。 */
+.kiichan-photo-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 20 / 31;
+  margin: 16px 0;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* 元画像1108×1477pxの、左180px・上60pxから800×1240pxを表示します。 */
+.kiichan-photo-frame img {
+  position: absolute;
+  width: 138.5%;
+  max-width: none;
+  height: auto;
+  left: -22.5%;
+  top: -4.83871%;
+}
