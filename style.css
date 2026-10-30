@@ -563,3 +563,12 @@ footer {
     margin-top: 24px;
   }
 }
+
+/* メンバーのプロフィール写真：元の縦横比で全体を表示します。 */
+.member-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 16px 0;
+  border-radius: 4px;
+}
