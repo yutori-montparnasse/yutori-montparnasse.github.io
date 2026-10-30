@@ -592,3 +592,24 @@ footer {
   left: -22.5%;
   top: -4.83871%;
 }
+
+/* ふっきーの写真：右側の人物の顔と上半身を表示します。 */
+.fukky-photo-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 5 / 6;
+  margin: 16px 0;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* 元画像1477×1108pxの、左765px・上310pxから450×540pxを表示します。 */
+/* 顔を描き替えず、元画像の表示範囲だけを調整しています。 */
+.fukky-photo-frame img {
+  position: absolute;
+  width: 328.222222%;
+  max-width: none;
+  height: auto;
+  left: -170%;
+  top: -57.407407%;
+}
